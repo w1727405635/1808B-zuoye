@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function flatten(arr){
+    return arr.reduce(function(prev,next){
+        console.log(prev);
+         return prev.concat(Array.isArray(next)?flatten(next):next);
+    },[]);
+ }
+</script>
+</html>
